@@ -35,46 +35,14 @@
 
   <name>Subset of Spotbugs Annotations</name>
   <description>Contains a subset of Spotbugs Annotations for suppressing warnings in code.</description>
-  <url>https://github.com/wcm-io/wcm-io-tooling/tree/develop/misc/spotbugs-annotations</url>
+  <url>https://github.com/wcm-io/io.wcm.tooling.spotbugs.annotations</url>
 
   <scm>
-    <connection>scm:git:https://github.com/wcm-io/wcm-io-tooling.git</connection>
-    <developerConnection>scm:git:https://github.com/wcm-io/wcm-io-tooling.git</developerConnection>
-    <url>https://github.com/wcm-io/wcm-io-tooling</url>
+    <connection>scm:git:https://github.com/wcm-io/io.wcm.tooling.spotbugs.annotations.git</connection>
+    <developerConnection>scm:git:https://github.com/wcm-io/io.wcm.tooling.spotbugs.annotations.git</developerConnection>
+    <url>https://github.com/wcm-io/io.wcm.tooling.spotbugs.annotations</url>
     <tag>HEAD</tag>
   </scm>
-
-  <build>
-    <pluginManagement>
-      <plugins>
-
-      <plugin>
-        <groupId>com.amashchenko.maven.plugin</groupId>
-        <artifactId>gitflow-maven-plugin</artifactId>
-        <configuration>
-          <gitFlowConfig>
-            <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
-            <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
-            <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
-          </gitFlowConfig>
-        </configuration>
-      </plugin>
-        <plugin>
-          <groupId>external.atlassian.jgitflow</groupId>
-          <artifactId>jgitflow-maven-plugin</artifactId>
-          <configuration>
-            <flowInitContext>
-              <releaseBranchPrefix>release/${project.artifactId}-</releaseBranchPrefix>
-              <hotfixBranchPrefix>hotfix/${project.artifactId}-</hotfixBranchPrefix>
-              <versionTagPrefix>${project.artifactId}-</versionTagPrefix>
-            </flowInitContext>
-          </configuration>
-        </plugin>
-
-      </plugins>
-
-    </pluginManagement>
-  </build>
 
   <profiles>
     <!-- profile used for building releases and deployment to sonatype/maven central -->
